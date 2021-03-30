@@ -4,6 +4,9 @@ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import About from "./components/About";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Background from "./assets/img/Background.jpg";
 
 function App() {
@@ -15,11 +18,15 @@ function App() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <Navbar />
       <Main />
       <About />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 }
