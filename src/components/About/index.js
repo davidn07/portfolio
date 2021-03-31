@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { ProgressBar } from "react-bootstrap";
 import {
   FaHtml5,
   FaNode,
@@ -16,25 +16,50 @@ import {
   SiGithub,
 } from "react-icons/si";
 import My from "../../assets/img/My.jpg";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const [section, setSection] = useState("about");
   return (
     <div className="container d-flex flex-column flex-md-row justify-content-between align-items-start">
       <div className="w-100 p-4">
-        <img src={My} className="img-fluid" height="300px" />
+        <motion.img
+          initial={{ y: 15 }}
+          animate={{ y: -15 }}
+          transition={{ yoyo: Infinity, duration: 1, type: "spring" }}
+          src={My}
+          className="img-fluid"
+          height="300px"
+        />
       </div>
       <div className="d-flex flex-column w-100 p-4">
         <div className="d-flex justify-content-between">
-          <Button onClick={() => setSection("about")} variant="dark">
+          <motion.button
+            className={section === "about" ? "btn btn-warning" : "btn btn-dark"}
+            whileHover={{ scale: 0.8 }}
+            onClick={() => setSection("about")}
+            variant="dark"
+          >
             About Me
-          </Button>
-          <Button onClick={() => setSection("skills")} variant="dark">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 0.8 }}
+            className={
+              section === "skills" ? "btn btn-warning" : "btn btn-dark"
+            }
+            onClick={() => setSection("skills")}
+            variant="dark"
+          >
             Skills
-          </Button>
-          <Button onClick={() => setSection("exp")} variant="dark">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 0.8 }}
+            className={section === "exp" ? "btn btn-warning" : "btn btn-dark"}
+            onClick={() => setSection("exp")}
+            variant="dark"
+          >
             Experience
-          </Button>
+          </motion.button>
         </div>
         <div className="d-flex flex-column align-items-start mt-3">
           {
@@ -44,25 +69,54 @@ const Index = () => {
                   <h3>My Story</h3>
                   <p>
                     I am a full-stack developer with specialization in React.
-                    Currently working as full stack developer in a IT company.
-                    Also I am working on some of my personal side projects.
+                    Currently working as full a stack developer in an IT
+                    company. Also, I am working on some of my personal side
+                    projects.
                   </p>
                 </div>
               ),
               skills: (
-                <div>
+                <div className="w-100">
                   <h3>Skills</h3>
-                  <div>
-                    <FaHtml5 size={64} className="mx-3 my-2" />
-                    <FaCss3Alt size={64} className="mx-3 my-2" />
-                    <SiJavascript size={64} className="mx-3 my-2" />
-                    <FaNode size={64} className="mx-3 my-2" />
-                    <FaReact size={64} className="mx-3 my-2" />
-                    <SiMongodb size={64} className="mx-3 my-2" />
-                    <SiBootstrap size={64} className="mx-3 my-2" />
-                    <SiGithub size={64} className="mx-3 my-2" />
-                    <SiDocker size={64} className="mx-3 my-2" />
-                    <FaAws size={64} className="mx-3 my-2" />
+                  <div className="d-flex justify-content-between align-items-center">
+                    <FaHtml5 size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={90} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <FaCss3Alt size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={80} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <SiJavascript size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={80} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <FaNode size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={70} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <FaReact size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={75} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <SiMongodb size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={65} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <SiBootstrap size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={90} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <SiGithub size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={80} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <SiDocker size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={50} />
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <FaAws size={32} className="mx-3 my-2" />
+                    <ProgressBar className="w-100" animated now={50} />
                   </div>
                 </div>
               ),
@@ -73,21 +127,21 @@ const Index = () => {
                     <h6>
                       Jan 2021 <FaLocationArrow size={14} />
                     </h6>
+                    <h6>Soulpage IT Solutions</h6>
                     <p>
                       A startup based in Hyderbad, India where I am working as
                       full stack developer
                     </p>
-                    <p>Skills: Javascript, Nodejs, Reactjs, Postgresql etc.</p>
                   </div>
                   <div className="d-flex flex-column">
                     <h6>
                       July - Decemeber 2020 <FaLocationArrow size={14} />
                     </h6>
+                    <h6>The Stencil</h6>
                     <p>
                       A startup based in Aurangabad, India where I am working as
                       full stack developer
                     </p>
-                    <p>Skills: Javascript, Nodejs, Reactjs, Postgresql etc.</p>
                   </div>
                 </div>
               ),

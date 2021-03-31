@@ -8,10 +8,14 @@ import {
   FaGithub,
   FaTwitter,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div
+    <motion.div
+      initial={{ x: -900 }}
+      animate={{ x: 0 }}
+      transition={{ ease: "easeIn", duration: 1, type: "spring" }}
       className="container d-flex flex-column justify-content-center"
       style={{ height: "100%" }}
     >
@@ -41,18 +45,28 @@ const Index = () => {
       </div>
       <div>
         <h5 className="text-white mt-2">
-          I am creative full stack devloper. Specialized in both front-end and
+          I am a creative full stack devloper. Specialized in both front-end and
           back-end.
         </h5>
       </div>
       <div className="d-flex justify-content-start mt-3">
-        <FaFacebookF color="white" size="2em" className="mr-4" />
-        <FaInstagram color="white" size="2em" className="mr-4" />
-        <FaLinkedinIn color="white" size="2em" className="mr-4" />
-        <FaGithub color="white" size="2em" className="mr-4" />
-        <FaTwitter color="white" size="2em" className="mr-4" />
+        <motion.a whileHover={{ scale: 1.2 }}>
+          <FaFacebookF color="white" size="2em" className="mr-4" />
+        </motion.a>
+        <motion.a whileHover={{ scale: 1.2 }}>
+          <FaInstagram color="white" size="2em" className="mr-4" />
+        </motion.a>
+        <motion.a whileHover={{ scale: 1.2 }}>
+          <FaLinkedinIn color="white" size="2em" className="mr-4" />
+        </motion.a>
+        <motion.a whileHover={{ scale: 1.2 }}>
+          <FaGithub color="white" size="2em" className="mr-4" />
+        </motion.a>
+        <motion.a whileHover={{ scale: 1.2 }}>
+          <FaTwitter color="white" size="2em" className="mr-4" />
+        </motion.a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
