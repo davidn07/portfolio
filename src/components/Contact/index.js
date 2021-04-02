@@ -6,6 +6,7 @@ import {
   SiWhatsapp,
   SiTwitter,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
@@ -27,11 +28,45 @@ const Index = () => {
       </div>
       <h4 className=" mt-5">Or</h4>
       <div className="d-flex justify-content-between w-50 mt-5">
-        <SiGmail size={32} />
-        <SiFacebook size={32} />
-        <SiInstagram size={32} />
-        <SiWhatsapp size={32} />
-        <SiTwitter size={32} />
+        <motion.a
+          className="text-dark"
+          whileHover={{ scale: 1.2 }}
+          href="mailto:nirmaldavid96@gmail.com"
+        >
+          <SiGmail size={32} />
+        </motion.a>
+        <motion.a
+          className="text-dark"
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://www.facebook.com/david.nirmal.3"
+        >
+          <SiFacebook size={32} />
+        </motion.a>
+        <motion.a
+          className="text-dark"
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://www.instagram.com/davidnirmal07/"
+        >
+          <SiInstagram size={32} />
+        </motion.a>
+        <motion.a
+          className="text-dark"
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://wa.link/ovuy55"
+        >
+          <SiWhatsapp size={32} />
+        </motion.a>
+        <motion.a
+          className="text-dark"
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://twitter.com/ndavid77"
+        >
+          <SiTwitter size={32} />
+        </motion.a>
       </div>
     </div>
   );

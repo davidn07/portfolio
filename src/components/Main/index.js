@@ -50,19 +50,39 @@ const Index = () => {
         </h5>
       </div>
       <div className="d-flex justify-content-start mt-3">
-        <motion.a whileHover={{ scale: 1.2 }}>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://www.facebook.com/david.nirmal.3"
+        >
           <FaFacebookF color="white" size="2em" className="mr-4" />
         </motion.a>
-        <motion.a whileHover={{ scale: 1.2 }}>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://www.instagram.com/davidnirmal07/"
+        >
           <FaInstagram color="white" size="2em" className="mr-4" />
         </motion.a>
-        <motion.a whileHover={{ scale: 1.2 }}>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://www.linkedin.com/in/david-nirmal-5a290316a/"
+        >
           <FaLinkedinIn color="white" size="2em" className="mr-4" />
         </motion.a>
-        <motion.a whileHover={{ scale: 1.2 }}>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://github.com/davidn07"
+        >
           <FaGithub color="white" size="2em" className="mr-4" />
         </motion.a>
-        <motion.a whileHover={{ scale: 1.2 }}>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          target="_blank"
+          href="https://twitter.com/ndavid77"
+        >
           <FaTwitter color="white" size="2em" className="mr-4" />
         </motion.a>
       </div>

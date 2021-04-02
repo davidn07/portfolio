@@ -16,7 +16,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import My from "../../assets/img/My.jpg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Index = () => {
   const [section, setSection] = useState("about");
@@ -24,7 +24,6 @@ const Index = () => {
     <div className="container d-flex flex-column flex-md-row justify-content-between align-items-start">
       <div className="w-100 p-4">
         <motion.img
-          initial={{ y: 15 }}
           animate={{ y: -15 }}
           transition={{ yoyo: Infinity, duration: 1, type: "spring" }}
           src={My}
@@ -61,64 +60,80 @@ const Index = () => {
             Experience
           </motion.button>
         </div>
-        <div className="d-flex flex-column align-items-start mt-3">
+        <div
+          className="d-flex flex-column align-items-start mt-3"
+          sytle={{ position: "relative" }}
+        >
           {
             {
               about: (
-                <div>
-                  <h3>My Story</h3>
-                  <p>
-                    I am a full-stack developer with specialization in React.
-                    Currently working as full a stack developer in an IT
-                    company. Also, I am working on some of my personal side
-                    projects.
-                  </p>
-                </div>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ x: 400 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: -300 }}
+                  >
+                    <h3>My Story</h3>
+                    <p>
+                      I am a full-stack developer with specialization in React.
+                      Currently working as full a stack developer in an IT
+                      company. Also, I am working on some of my personal side
+                      projects.
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
               ),
               skills: (
-                <div className="w-100">
-                  <h3>Skills</h3>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <FaHtml5 size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={90} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <FaCss3Alt size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={80} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <SiJavascript size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={80} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <FaNode size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={70} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <FaReact size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={75} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <SiMongodb size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={65} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <SiBootstrap size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={90} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <SiGithub size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={80} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <SiDocker size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={50} />
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <FaAws size={32} className="mx-3 my-2" />
-                    <ProgressBar className="w-100" animated now={50} />
-                  </div>
-                </div>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ x: 400 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: -300 }}
+                    className="w-100"
+                  >
+                    <h3>Skills</h3>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <FaHtml5 size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={90} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <FaCss3Alt size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={80} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <SiJavascript size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={80} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <FaNode size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={70} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <FaReact size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={75} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <SiMongodb size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={65} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <SiBootstrap size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={90} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <SiGithub size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={80} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <SiDocker size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={50} />
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <FaAws size={32} className="mx-3 my-2" />
+                      <ProgressBar className="w-100" animated now={50} />
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               ),
               exp: (
                 <div>
