@@ -20,7 +20,7 @@ const Index = () => {
       style={{ height: "100%" }}
     >
       <div>
-        <Badge variant="light">Hi There !</Badge>
+        <Badge variant="light">Hi There, how are you ?</Badge>
       </div>
       <div>
         <h1 className="text-white">I am David Nirmal</h1>
