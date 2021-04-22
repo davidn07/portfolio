@@ -10,7 +10,10 @@ import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="container mt-5 box p-4 d-flex flex-column align-items-center">
+    <div
+      id="contact"
+      className="container mt-5 box p-4 d-flex flex-column align-items-center"
+    >
       <h4>Contact Me</h4>
       <div className="d-flex flex-column flex-md-row justify-content-between mt-5 w-100">
         <div className="d-flex flex-column">

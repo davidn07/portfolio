@@ -18,9 +18,10 @@ const Index = () => {
       transition={{ ease: "easeIn", duration: 1, type: "spring" }}
       className="container d-flex flex-column justify-content-center"
       style={{ height: "100%" }}
+      id="home"
     >
       <div>
-        <Badge variant="light">Hi There, how are you ?</Badge>
+        <Badge variant="light">Hi There !</Badge>
       </div>
       <div>
         <h1 className="text-white">I am David Nirmal</h1>

@@ -29,6 +29,7 @@ const Index = () => {
           src={My}
           className="img-fluid"
           height="300px"
+          id="about"
         />
       </div>
       <div className="d-flex flex-column w-100 p-4">
