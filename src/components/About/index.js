@@ -32,7 +32,7 @@ const Index = () => {
           id="about"
         />
       </div>
-      <div className="d-flex flex-column w-100 p-4">
+      <div className="d-flex flex-column w-100 pt-4 p-sm-4">
         <div className="d-flex justify-content-between">
           <motion.button
             className={section === "about" ? "btn btn-warning" : "btn btn-dark"}

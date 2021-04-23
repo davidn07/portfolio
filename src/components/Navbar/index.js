@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
+import Logo from "../../assets/img/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Index() {
   return (
@@ -15,9 +17,11 @@ function Index() {
           expand="lg"
         >
           <Navbar.Brand className="text-white" href="#home">
-            My Site
+            <img src={Logo} alt="logo" height="40" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <GiHamburgerMenu className="text-white" />
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link className="text-white">
