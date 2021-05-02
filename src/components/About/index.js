@@ -27,7 +27,7 @@ const Index = () => {
           animate={{ y: -15 }}
           transition={{ yoyo: Infinity, duration: 1, type: "spring" }}
           src={My}
-          className="img-fluid"
+          className="img-fluid my-img"
           height="300px"
           id="about"
         />

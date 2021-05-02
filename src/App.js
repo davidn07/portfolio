@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Background from "./assets/img/Background.jpg";
+import MyProjects from "components/MyProjects";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Main />
       <About />
       {/* <Services /> */}
+      <MyProjects />
       <Contact />
       <Footer />
     </div>
